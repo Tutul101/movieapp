@@ -23,9 +23,10 @@ function Header() {
   const headerRef = useRef(null);
 
   const active = headerNav.findIndex((e) => e.path === pathname);
+  console.log(pathname);
   return (
     <div useRef={headerRef} className="header">
-      <div className="header__wrap contaier">
+      <div className="header__wrap container">
         <div className="logo">
           <img src={logo} alt="logo" />
           <Link to="/">tMovies</Link>
@@ -40,7 +41,6 @@ function Header() {
           })}
         </ul>
       </div>
-      Header
     </div>
   );
 }
